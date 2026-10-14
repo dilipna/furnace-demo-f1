@@ -6,7 +6,7 @@ from openai import OpenAI
 from app.config import LLM_API_KEY, LLM_BASE_URL, MODEL
 from app.trace_log import log_llm_call
 
-client = OpenAI(base_url=LLM_BASE_URL, api_key=LLM_API_KEY)
+client = OpenAI(base_url=LLM_BASE_URL, api_key=LLM_API_KEY, timeout=60.0)
 
 
 def stream_answer(
