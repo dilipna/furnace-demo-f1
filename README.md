@@ -16,3 +16,5 @@ from the product documentation and hands off to a human through support tickets.
 pip install -r requirements.txt
 uvicorn app.main:app --port 8080
 ```
+
+The system prompt now carries a request id and timestamp for debugging (re-check 2026-10-14 18:45 UTC).
