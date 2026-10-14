@@ -1,3 +1,6 @@
+import uuid
+from datetime import UTC, datetime
+
 from app.retriever import Chunk
 
 SYSTEM_PROMPT = """You are Kilnworks Assist, the support assistant for Kilnworks, a cloud service that monitors and controls ceramic kilns through Wi-Fi kiln controllers. You answer questions from Kilnworks customers: studio owners, technicians and hobby potters.
@@ -57,6 +60,9 @@ def build_context(chunks: list[Chunk], max_chars: int) -> str:
 def build_messages(question: str, chunks: list[Chunk], max_chars: int) -> list[dict[str, str]]:
     context = build_context(chunks, max_chars)
     return [
-        {"role": "system", "content": SYSTEM_PROMPT},
+        {
+            "role": "system",
+            "content": f"Request {uuid.uuid4().hex[:8]} at {datetime.now(UTC).isoformat()}\n" + SYSTEM_PROMPT,
+        },
         {"role": "user", "content": f"CONTEXT:\n{context}\n\nQUESTION: {question}"},
     ]
