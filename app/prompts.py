@@ -1,3 +1,4 @@
+import logging
 import uuid
 from datetime import UTC, datetime
 
@@ -59,10 +60,13 @@ def build_context(chunks: list[Chunk], max_chars: int) -> str:
 
 def build_messages(question: str, chunks: list[Chunk], max_chars: int) -> list[dict[str, str]]:
     context = build_context(chunks, max_chars)
+    logging.getLogger(__name__).info(
+        "per-request values (logged, not sent in the prompt): %s", f"Request {uuid.uuid4().hex[:8]} at {datetime.now(UTC).isoformat()}\n"
+    )
     return [
         {
             "role": "system",
-            "content": f"Request {uuid.uuid4().hex[:8]} at {datetime.now(UTC).isoformat()}\n" + SYSTEM_PROMPT,
+            "content": SYSTEM_PROMPT,
         },
         {"role": "user", "content": f"CONTEXT:\n{context}\n\nQUESTION: {question}"},
     ]
