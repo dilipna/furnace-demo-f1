@@ -1,0 +1,19 @@
+# Installed by Furnace Forge. Single-failure-mode LLM judge, run by Furnace Guard with
+# your own model key (BYOK). Results are advisory until calibrated against human labels
+# (TPR and TNR >= 0.8 on held-out labels).
+key: judge:ungrounded_answer
+failure_mode: ungrounded answer
+fail_when: >-
+  the answer states a factual claim about the product (a number, limit, price, procedure,
+  policy or capability) that is not supported by the retrieved context, or contradicts it.
+pass_when: >-
+  every factual claim is supported by the context, or the answer says the information is
+  not in the documentation.
+model:
+  provider: groq          # groq | openrouter | openai | ollama
+  name: llama-3.3-70b-versatile
+  api_key_env: GROQ_API_KEY
+calibration:
+  status: uncalibrated
+  min_tpr: 0.8
+  min_tnr: 0.8

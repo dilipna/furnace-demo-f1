@@ -1,0 +1,34 @@
+{"id": "q000", "question": "How much does the Studio plan cost?"}
+{"id": "q001", "question": "How many kilns does the Workshop plan support?"}
+{"id": "q002", "question": "Is there a free trial?"}
+{"id": "q003", "question": "When are invoices issued?"}
+{"id": "q004", "question": "Which payment methods are accepted?"}
+{"id": "q005", "question": "How do I get a refund?"}
+{"id": "q006", "question": "How do I pair a controller?"}
+{"id": "q007", "question": "What network does the controller need?"}
+{"id": "q008", "question": "What does error E14 mean?"}
+{"id": "q009", "question": "What does error E22 mean?"}
+{"id": "q010", "question": "What does error E31 mean?"}
+{"id": "q011", "question": "How many segments can a schedule have?"}
+{"id": "q012", "question": "Can I edit a schedule during a firing?"}
+{"id": "q013", "question": "Which alert channels exist?"}
+{"id": "q014", "question": "How fast are temperature alerts?"}
+{"id": "q015", "question": "How long is firing history kept?"}
+{"id": "q016", "question": "Can I export my data?"}
+{"id": "q017", "question": "What roles exist?"}
+{"id": "q018", "question": "Can a Viewer start a firing?"}
+{"id": "q019", "question": "What is the API rate limit?"}
+{"id": "q020", "question": "How do I authenticate to the API?"}
+{"id": "q021", "question": "What happens if the lid opens?"}
+{"id": "q022", "question": "Can safety interlocks be disabled remotely?"}
+{"id": "q023", "question": "How are firmware updates installed?"}
+{"id": "q024", "question": "What is the current firmware version?"}
+{"id": "q025", "question": "How long is the controller warranty?"}
+{"id": "q026", "question": "Are thermocouples covered by warranty?"}
+{"id": "q027", "question": "When is support available?"}
+{"id": "q028", "question": "How fast does support respond?"}
+{"id": "q029", "question": "How do I delete my account?"}
+{"id": "q030", "question": "Is deleted data recoverable?"}
+{"id": "q031", "question": "Does the controller work offline?"}
+{"id": "q032", "question": "Which integrations are supported?"}
+{"id": "q033", "question": "Do webhooks retry?"}
